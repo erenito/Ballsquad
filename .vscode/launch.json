@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-BallsquadApplication<ballsquad>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.ballsquad.ballsquad.BallsquadApplication",
+            "projectName": "ballsquad",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
