@@ -1,21 +1,28 @@
-package model;
+package com.ballsquad.ballsquad.model;
 
-import java.util.List;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
+@Entity
+@Table(name = "authors")
 public class Author {
 
+    @Id
+    @Column(name = "id", nullable = false, unique = true)
     String id;
+
+    @Column(name = "name", nullable = false)
     String name;
-    List<Work> works;
 
     public Author() {
     }
 
-    public Author(String name, String id, List<Work> works) {
+    public Author(String name, String id) {
         super();
         this.name = name;
         this.id = id;
-        this.works = works;
     }
 
     public String getName() {
@@ -26,20 +33,12 @@ public class Author {
         return this.id;
     }
 
-    public List<Work> getWorks() {
-        return works;
-    }
-
     public void setName(String name) {
         this.name = name;
     }
 
     public void setId(String id) {
         this.id = id;
-    }
-
-    public void setWorks(List<Work> works) {
-        this.works = works;
     }
 
 }
